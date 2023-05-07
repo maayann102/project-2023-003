@@ -1,0 +1,19 @@
+0) Sumo Floating Car Data (FCD) Trace File
+sumo -c myConfig.sumocfg --fcd-output sumoTrace.xml
+
+1) Raw vehicle positions dump: 
+sumo -c myconfig.sumocfg --netstate-dump my_dump_file.xml
+
+2) Emission Output: Amount of CO2, CO, HC, NOX, fuel, electricity, noise, emitted by the vehicle in the actual simulation step
+sumo -c myconfig.sumocfg --emission-output my_emission_file.xml
+
+3) Full Output: 
+dump every information contained in the network, including emission, position, speed, lane. 
+Warning!!! takes a lot of time to accomplish this task and the file size is very big (~GB) 
+sumo -c myconfig.sumocfg --full-output my_full_output.xml
+
+4) SUMO Lane change Output
+sumo -c myconfig.sumocfg --lanechange-output my_lane_change_file.xml
+
+5) SUMO VTK Output
+sumo -c myconfig.sumocfg --vtk-output my_vkt_file.xml
