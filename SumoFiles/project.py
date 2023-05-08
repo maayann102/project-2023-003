@@ -27,7 +27,8 @@ def get_options():
 # contains TraCI control loop
 def run():
     step = 0
-    while traci.simulation.getMinExpectedNumber() > 0:
+    #while traci.simulation.getMinExpectedNumber() > 0:
+    while step < 200:
         traci.simulationStep()
         print(step)
 
@@ -37,8 +38,9 @@ def run():
         #    traci.vehicle.changeLane(veh, 2, 25)
 
         if step == 100:
-            traci.vehicle.changeTarget("1", "End")
-            traci.vehicle.changeTarget("3", "End")
+            traci.vehicle.changeTarget("yellow1", "End")
+            traci.vehicle.changeTarget("blue1", "End")
+            traci.vehicle.changeTarget("red1", "End")
 
         step += 1
 
@@ -58,5 +60,5 @@ if __name__ == "__main__":
 
     # traci starts sumo as a subprocess and then this script connects and runs
     traci.start([sumoBinary, "-c", "project.sumocfg",
-                             "--tripinfo-output", "tripinfo.xml"])
+                             "--tripinfo-output", "tripinfo.xml", "--start"])
     run()
