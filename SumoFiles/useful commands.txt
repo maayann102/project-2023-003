@@ -17,3 +17,11 @@ sumo -c myconfig.sumocfg --lanechange-output my_lane_change_file.xml
 
 5) SUMO VTK Output
 sumo -c myconfig.sumocfg --vtk-output my_vkt_file.xml
+
+https://www.youtube.com/watch?v=hE7lZWGXaeU
+
+https://github.com/chaotictoejam/VANETTutorials
+
+https://www.rit.edu/wisplab/sites/rit.edu.wisplab/files/2021-12/V2V%20Simulators%20and%20Related%20Software.pdf
+
+
